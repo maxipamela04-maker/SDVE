@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SDVE.App/SDVE.App.csproj" Id="d482329e-4279-49f4-afbd-497ece802a1d" />
+  <Project Path="SDVE.Core/SDVE.Core/SDVE.Core.csproj" />
+</Solution>
