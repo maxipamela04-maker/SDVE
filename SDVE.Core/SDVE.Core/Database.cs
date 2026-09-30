@@ -49,4 +49,28 @@ INSERT OR IGNORE INTO Convocatoria(Id, Nombre) VALUES
  (1,'Sociedad de Alumnos'),(2,'Consejo Universitario'),(3,'Consejo de Representantes');";
         cmd.ExecuteNonQuery();
     }
+    public static void SeedDatosPrueba()
+    {
+        using var cn = Open();
+
+        using var check = cn.CreateCommand();
+        check.CommandText = "SELECT COUNT(*) FROM Alumno";
+        long alumnos = (long)check.ExecuteScalar()!;
+        if (alumnos > 0) return; // ya hay datos, no insertar de nuevo
+
+        using var cmd = cn.CreateCommand();
+        cmd.CommandText = @"
+INSERT INTO Alumno(Codigo,Nombre,Grupo,Carrera,Centro) VALUES
+ ('202001','Ana López','5A','Ing. Sistemas','Centro Norte'),
+ ('202002','Luis Pérez','5A','Ing. Sistemas','Centro Norte'),
+ ('202003','Marta Ruiz','5B','Contaduría','Centro Sur');
+
+INSERT INTO Candidato(ConvocatoriaId,Nombre) VALUES
+ (1,'Carlos Gómez'),
+ (1,'Diana Torres'),
+ (2,'Jorge Salas'),
+ (2,'Elena Vidal'),
+ (3,'Raúl Núñez');";
+        cmd.ExecuteNonQuery();
+    }
 }
