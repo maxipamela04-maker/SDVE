@@ -12,7 +12,8 @@ namespace SDVE.App
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             SDVE.Core.Database.Initialize();
-            Application.Run(new Form1());
+            SDVE.Core.Database.SeedDatosPrueba();
+            Application.Run(new frmLogin());
         }
     }
 }
