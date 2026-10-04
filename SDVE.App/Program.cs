@@ -13,7 +13,7 @@ namespace SDVE.App
             ApplicationConfiguration.Initialize();
             SDVE.Core.Database.Initialize();
             SDVE.Core.Database.SeedDatosPrueba();
-            Application.Run(new frmLogin());
+            Application.Run(new frmPrincipal());
         }
     }
 }
