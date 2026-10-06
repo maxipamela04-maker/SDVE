@@ -63,7 +63,8 @@ INSERT OR IGNORE INTO Convocatoria(Id, Nombre) VALUES
 INSERT INTO Alumno(Codigo,Nombre,Grupo,Carrera,Centro) VALUES
  ('202001','Ana López','5A','Ing. Sistemas','Centro Norte'),
  ('202002','Luis Pérez','5A','Ing. Sistemas','Centro Norte'),
- ('202003','Marta Ruiz','5B','Contaduría','Centro Sur');
+ ('202003','Zoe Rivera','5C','Psicologia','Centro Sur'),
+ ('202004','Marta Ruiz','5B','Contaduría','Centro Sur');
 
 INSERT INTO Candidato(ConvocatoriaId,Nombre) VALUES
  (1,'Carlos Gómez'),
